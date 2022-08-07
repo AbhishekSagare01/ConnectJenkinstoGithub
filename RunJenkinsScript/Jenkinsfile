@@ -26,12 +26,12 @@ pipeline {
         }
         stage('Full path') {
             steps {
-                sh("${env.WORKSPACE}/RunJenkinsScript/scripts/fibonacci.sh ${env.NUMBER}")
+                sh("${WORKSPACE}/RunJenkinsScript/scripts/fibonacci.sh ${env.NUMBER}")
             }
         }
         stage('Change directory') {
             steps {
-                dir("${env.WORKSPACE}/RunJenkinsScript/scripts"){
+                dir("${WORKSPACE}/RunJenkinsScript/scripts"){
                     sh("./fibonacci.sh ${env.NUMBER}")
                 }
             }
