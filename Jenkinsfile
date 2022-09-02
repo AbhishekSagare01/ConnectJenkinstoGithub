@@ -11,7 +11,7 @@ pipeline {
 
         stage('parallel to requirements') {
           steps {
-            echo 'I am Abhishek'
+            echo 'I am Abhishek Sagare'
           }
         }
 
